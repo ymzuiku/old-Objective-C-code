@@ -1,0 +1,13 @@
+#pragma mark - 旋转动画
+
+    [UIViewbeginAnimations:@"flipBtn"context:nil];
+
+    [UIViewsetAnimationDuration:0.5];
+
+    [UIViewsetAnimationDelegate:self];
+
+    [UIViewsetAnimationDidStopSelector:@selector(UIViewAnimationsDidStop:finished:context:)];
+
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:leftBtnView cache:YES];
+
+    [UIViewcommitAnimations];
